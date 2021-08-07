@@ -5,9 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Quiz Game</title>
 </head>
 <body>
+    <div class="heading">
+        <h1>Welcome to the Quiz Game!</h1>
+        <p>This quiz contains 100 easy quiz questions - but how many can you get right? 
+            <br>Enter your answers in the box below and press submit.
+            <br> Don't worry, we'll keep track of your score!
+        </p>
+    </div>
+    
+    <div class="game-area">
+        <div class="question-area"></div>
+            <p id="question"></p>
+        <div class="answer-area">
+            <input id="answer-box" type="text">
+            <button class="">Submit Answer</button>
+            <button class="">Next</button>
+            <p id="correct-answer"></p>
+        </div>   
+    </div>
+    
+    <div class="score-board">
+        <p class="scores">Correct Answers <span id="score">0</span></p>
+        <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+    </div>
+
+
+
+
+
+
     <script src="assets/js/script.js"></script> 
 </body>
 </html>
