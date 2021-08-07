@@ -4,39 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Link to CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+ <!-- Tab heading -->
     <title>Quiz Game</title>
 </head>
 <body>
+    <!-- Welcome Blurb -->
     <div class="heading">
-        <h1>Welcome to the Quiz Game!</h1>
+        <div class="hero"></div>
+        <h1>Welcome to the Quiz Game</h1>
         <p>This quiz contains 100 easy quiz questions - but how many can you get right? 
             <br>Enter your answers in the box below and press submit.
             <br> Don't worry, we'll keep track of your score!
         </p>
     </div>
-    
+    <!-- game area -->
     <div class="game-area">
+        <!-- Question area -->
         <div class="question-area"></div>
             <p id="question"></p>
+            <!-- Answer area -->
         <div class="answer-area">
             <input id="answer-box" type="text">
-            <button class="">Submit Answer</button>
-            <button class="">Next</button>
+            <button class="submit">Submit Answer</button>
+            <button class="next">Next</button>
             <p id="correct-answer"></p>
         </div>   
     </div>
-    
+    <!-- Score Board -->
     <div class="score-board">
         <p class="scores">Correct Answers <span id="score">0</span></p>
         <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
     </div>
 
-
-
-
-
-
+<!-- Link to JavaScript -->
     <script src="assets/js/script.js"></script> 
 </body>
 </html>

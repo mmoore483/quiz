@@ -1,0 +1,52 @@
+/* Import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Roboto&display=swap');
+
+/* Info on global variable creation for colours was from https://www.w3schools.com/css/css3_variables.asp */
+:root {
+    --dark: #300410;
+    --pale: #FFEBF1;
+    --lightpink: #FF96B5;
+    --brightpink: #FF3370;
+  }
+
+/* General Style */
+
+body {
+    font-family: "Robot", sans-serif;
+    text-align: center;
+    color: var(--dark);
+    background-color: var(--pale);
+    font-size: 1em;
+}
+/* Welcome Blurb */
+
+h1 {
+    font-family: "Bitter", sans-serif;
+    font-size: 2em;
+}
+
+.hero {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/question-mark.jpg"); */
+    background-image: url("../images/question-mark.jpg");
+    height:50vh;
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Answer area */
+
+button {
+    border: none;
+    font-size: 2em;
+    margin: 0.5em auto 0 auto;
+}
+
+.submit {
+    background-color: var(--brightpink);
+}
+
+.next {
+    background-color: var(--lightpink);
+}
+
