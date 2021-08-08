@@ -83,7 +83,7 @@ function inCorrectScores() {
 //This function shows the correct answer rather than creating an alert
 function celebrate() {
   let correctAnswer = document.getElementById("correct-answer").textContent;
-  document.getElementById("message").innerText = `YAY! You got it right! \r\n The correct answer is: \r\n ${correctAnswer}`;
+  document.getElementById("message").innerText = `YAY! You got it right! \r\n\r\n The correct answer is: \r\n ${correctAnswer}`;
   document.getElementById("answer-message").style.display = "flex";
 }
 
