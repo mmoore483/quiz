@@ -21,7 +21,7 @@ body {
 }
 /* Welcome Blurb */
 
-h1 {
+h1, #question {
     font-family: "Bitter", sans-serif;
     font-size: 2em;
 }
@@ -59,10 +59,6 @@ h1 {
 #next {
     background-color: rgba(var(--lightpink));
     cursor: pointer;
-}
-
-#question {
-    font-size: 2em;
 }
 
 /* Winning message */
