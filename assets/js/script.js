@@ -40,6 +40,7 @@ async function importData() {
 let num = randomNumber();
 document.getElementById("question").textContent = questionArray[num];
 document.getElementById("correct-answer").textContent = answerArray[num];
+document.getElementById("correct-answer").style.display = "none";
 }
 
 //Random number generator for question selection
