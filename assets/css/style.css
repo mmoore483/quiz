@@ -1,12 +1,13 @@
 /* Import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Bitter&family=Roboto&display=swap');
 
-/* Info on global variable creation for colours was from https://www.w3schools.com/css/css3_variables.asp */
+/* Info on global variable creation for colours was from https://www.w3schools.com/css/css3_variables.asp 
+Colours are in rgba so that opacity can be applied for the winning message background colour https://stackoverflow.com/questions/40010597/how-do-i-apply-opacity-to-a-css-color-variable*/
 :root {
-    --dark: #300410;
-    --pale: #FFEBF1;
-    --lightpink: #FF96B5;
-    --brightpink: #FF3370;
+    --dark: 48, 4, 16;
+    --pale: 255,235,241;
+    --lightpink: 255, 150, 181;
+    --brightpink: 255, 51, 112;
   }
 
 /* General Style */
@@ -14,8 +15,8 @@
 body {
     font-family: "Robot", sans-serif;
     text-align: center;
-    color: var(--dark);
-    background-color: var(--pale);
+    color: rgba(var(--dark));
+    background-color: rgba(var(--pale));
     font-size: 1em;
 }
 /* Welcome Blurb */
@@ -43,11 +44,11 @@ button {
 }
 
 #submit {
-    background-color: var(--brightpink);
+    background-color: rgba(var(--brightpink));
 }
 
 #next {
-    background-color: var(--lightpink);
+    background-color: rgba(var(--lightpink));
     cursor: pointer;
 }
 
@@ -62,17 +63,17 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--dark);
+    background-color: rgba(var(--dark),0.95);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--pale);
+    color: rgba(var(--pale));
     z-index: 1;
     flex-direction: column;
     font-size: 2em;
 }
 
 #next:hover {
-    background-color: var(--brightpink);
+    background-color: rgba(var(--brightpink));
 }
 

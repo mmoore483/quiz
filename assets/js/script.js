@@ -91,6 +91,6 @@ function celebrate() {
 function wrongAnswer() {
   let userAnswer = document.getElementById("answer-box").value;
   let correctAnswer = document.getElementById("correct-answer").textContent;
-  document.getElementById("message").innerText = `Oops... you answered: \r\n ${userAnswer}. \r\n\r\n The correct answer is: \r\n ${correctAnswer}`;
+  document.getElementById("message").innerText = `Oops... you answered: \r\n ${userAnswer} \r\n\r\n The correct answer is: \r\n ${correctAnswer}`;
   document.getElementById("answer-message").style.display = "flex";
 }
