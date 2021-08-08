@@ -46,7 +46,7 @@ button {
     background-color: var(--brightpink);
 }
 
-.next {
+#next {
     background-color: var(--lightpink);
 }
 

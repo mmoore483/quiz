@@ -6,6 +6,10 @@ let submitButton = document.getElementById("submit");
                 checkAnswer();
             }
         );
+let nextButton = document.getElementById("next");
+nextButton.addEventListener("click", function() {
+  importData();
+})
           })
     
 /* Following "The Coding Train" YouTube tutorial series Working With Data & APIs in JavaScript
