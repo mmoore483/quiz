@@ -1,5 +1,6 @@
 //These are all the event listeners.
 document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("answer-message").style.display = "none";
   importData();
   let submitButton = document.getElementById("submit");
   submitButton.addEventListener("click", function () {
@@ -9,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   nextButton.addEventListener("click", function () {
     importData();
     document.getElementById("answer-box").value = "";
+    document.getElementById("answer-message").style.display = "none";
   })
 })
 
@@ -58,10 +60,10 @@ function checkAnswer() {
   //Compare the lower case answers and alert the user of whether they got it correct and what the answer is
   let isCorrect = userAnswer === correctAnswer;
   if (isCorrect) {
-    alert("YAY! You got it right!");
+    celebrate();
     correctScores();
   } else {
-    alert(`Oops... you answered ${userAnswer}. The correct answer is ${correctAnswer}!`);
+    wrongAnswer();
     inCorrectScores();
   }
 }
@@ -76,4 +78,19 @@ function correctScores() {
 function inCorrectScores() {
   let oldScore = parseInt(document.getElementById("incorrect").innerText);
   document.getElementById("incorrect").innerText = ++oldScore; 
+}
+
+//This function shows the correct answer rather than creating an alert
+function celebrate() {
+  let correctAnswer = document.getElementById("correct-answer").textContent;
+  document.getElementById("message").innerText = `YAY! You got it right! \r\n The correct answer is: \r\n ${correctAnswer}`;
+  document.getElementById("answer-message").style.display = "flex";
+}
+
+//This function shows the correct answer rather than creating an alert
+function wrongAnswer() {
+  let userAnswer = document.getElementById("answer-box").value;
+  let correctAnswer = document.getElementById("correct-answer").textContent;
+  document.getElementById("message").innerText = `Oops... you answered: \r\n ${userAnswer}. \r\n\r\n The correct answer is: \r\n ${correctAnswer}`;
+  document.getElementById("answer-message").style.display = "flex";
 }

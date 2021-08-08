@@ -48,8 +48,31 @@ button {
 
 #next {
     background-color: var(--lightpink);
+    cursor: pointer;
 }
 
 #question {
     font-size: 2em;
 }
+
+/* Winning message */
+#answer-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--pale);
+    z-index: 1;
+    flex-direction: column;
+    font-size: 2em;
+}
+
+#next:hover {
+    background-color: var(--brightpink);
+}
+
