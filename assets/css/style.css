@@ -42,7 +42,7 @@ button {
     margin: 0.5em auto 0 auto;
 }
 
-.submit {
+#submit {
     background-color: var(--brightpink);
 }
 
