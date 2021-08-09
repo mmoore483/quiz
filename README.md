@@ -1,104 +1,132 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# A Quiz Game
 
-Welcome mmoore483,
+Portfolio Project 2 JavaScript Essentials - Code Institute
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
+## About
 
-## Gitpod Reminders
+This Quiz game is designed to act as a randomised quiz for people who love easy levelled trivia. There was an uptake in quizzing at the beginning of the COVID-19 pandemic and these are the level of questions enjoyed in homes all over the country. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# User Experience
 
-`python3 -m http.server`
+## Strategy
 
-A blue button should appear to click: _Make Public_,
+Reasons a user may visit a site:
 
-Another blue button should appear to click: _Open Browser_.
+- A user wants to practise easy levelled trivia and test how many they get right
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- A user may want to play the quiz game with a friend
 
-A blue button should appear to click: _Make Public_,
+Reasons for the site:
 
-Another blue button should appear to click: _Open Browser_.
+- Increase visitor numbers to Penshaw Monument by providing easy access to information in a minimalistic fashion
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Scope
 
-To log into the Heroku toolbelt CLI:
+A user can expect: 
+    
+  - A single paged site
+  - Responsive design for screen sizes maintaining legibility of features
+  - Randomised questions for a different order each visit
+  - A scoreboard to keep track of the number of correct answers
+  - A screen that tells them the correct answer if they got it wrong
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Structure
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+The website will consist of one page with distinct areas.
 
-------
+1. A hero image welcoming them to the site
+2. An introduction to what the site is for
+3. A question is asked
+4. An answer box
+5. A submit button
+6. Upon triggering the submit button, the screen will be overlayed with a celebration or commiseration screen and a next button to return to the main screen for the next question
+7. An area for keeping track of the score
 
-## Release History
+## Surface
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Colours
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+![Color Palette]() 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- In the CSS 4 variable colours have been created: dark, pale, lightpink, brightpink.
+- Dark, #300410 has been used rather than black for most of the site to aid user experience, especially for those who are low vision users. It is a colour picked out from the hero image in order to have a consistent theme. It is used either as text or a background colour for the best contrast. 
+- Pale, #FFEBF1 has been used for text contrast on strong background colors for better contrast, limiting eye strain and allowing for a better user experience.
+- Pale has also been used as a background for the main body of the site. This aids contrast with the dark text but also maintains a minimalistic site allowing the text information to be the main focus for the user. 
+- Brightpink has been selected from the hero image using the colour picker tool. This has been used as an accent colour for buttons
+- Lightpink has been selected from the hero image using the colour picker tool. This has been used as an accent colour for buttons.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+The colour picker used was in chrome dev tools.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+The colour palette image was produced using coolors.co.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Typography
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+I have used https://fonts.google.com/ for my fonts. Using Bitter for the headings and Roboto for body text and sans-serif as back up. These are classic, easily legible fonts.
+To achieve this I imported the following to the top of my style.css file.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+    @import url('https://fonts.googleapis.com/css2?family=Bitter&family=Roboto&display=swap');
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Imagery
+The hero image for this site was found from [pixabay](https://pixabay.com/illustrations/question-mark-question-why-5633947/) and is open access free for commercial use with no attribution required. It is of a question mark as that is a common association with quizzes: asking questions.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Features
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Existing Features
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Features Left to Implement
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Testing
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Personal Testing
 
-------
+### Validator Testing
 
-## FAQ about the uptime script
+### Unfixed Bugs
 
-**Why have you added this script?**
+# Deployment
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigate to the Settings tab 
+  - Navigate down the sidebar to the Pages tab
+  - From the Source section drop-down menu, select the Master Branch
+  - Then press save, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-**How will this affect me?**
+The live link can be found here - https://mmoore483.github.io/visit-penshaw-monument-p1/
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+When changes are made to the site using GitHub, the git push command will automatically update the deployed site.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Forking
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+To trial changes to the site without affecting the original, the GitHub Repository can be forked.
 
-**So….?**
+- Log into GitHub and locate the desired repository
+- In the top right, click the Fork button.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+## Cloning
 
-**Can I opt out?**
+[Cloning](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) is useful for a multitude of reasons: to contribute to a project, to trial changes, to fix merge conflicts, add or remove files, and push larger commits.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- Log into your GitHub then find the gitpod repository
+- Click the Code button
+- If cloning with HTTPS click the clipboard icon to copy the link
+- Open Gitbash
+- Change the current working directory to the location where you want the cloned directory to be.
+- Type git clone, and then paste the URL you copied earlier.
+- Press enter to create your local clone
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+# Credits
+-  
+- Quiz questions from https://www.funquizzes.uk/easy-quiz-questions/
+- Responsiveness tested using [whatismyscreenresolution](http://whatismyscreenresolution.net/multi-screen-test)
+- Testing site for colour accessibility using Chrome extension [Let's get color blind](https://chrome.google.com/webstore/detail/lets-get-color-blind/bkdgdianpkfahpkmphgehigalpighjck/related?hl=en)
+- coolors.co for creation of the colour palette image
+- googlefonts for the imported fonts
+- W3C HTML Validator for testing validity of HTML
+- Jigsaw CSS Validator for testing validity of CSS
+- JShint Validator for testing validity of JS
+- Matt Rudge for the Code Institute Master Template
+- Pixabay for [question mark image](https://pixabay.com/illustrations/question-mark-question-why-5633947/)
+- Info on global variable creation for colours was from [W3Schools](https://www.w3schools.com/css/css3_variables.asp)
+- The Coding Train [tutorial 1.1](https://www.youtube.com/watch?v=tc8DU14qX6I&t=0s&ab_channel=TheCodingTrain) and [tutorial 1.2](https://www.youtube.com/watch?v=RfMkdvN-23o&ab_channel=TheCodingTrain)
+- The Code Institute [Love Maths Walkthrough](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode) for logic behind random number generation and tracking scores
 
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
