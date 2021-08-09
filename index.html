@@ -14,7 +14,7 @@
     <div class="heading">
         <div class="hero"></div>
         <h1>Welcome to the Quiz Game</h1>
-        <p>This quiz contains 100 easy quiz questions - but how many can you get right? 
+        <p>How many can you get right? 
             <br>Enter your answers in the box below and press submit.
             <br> Don't worry, we'll keep track of your score!
         </p>
@@ -29,8 +29,12 @@
         <div class="answer-area">
             <input id="answer-box" type="text">
             <button id="submit" data-type="submit">Submit Answer</button>
-            <button id="next">Next</button>
+            
             <p id="correct-answer"></p>
+        </div>
+        <div id="answer-message">
+            <p id="message">Testing</p>
+            <button id="next">Next</button>
         </div>   
     </div>
     <!-- Score Board -->
@@ -38,6 +42,7 @@
         <p class="scores">Correct Answers <span id="score">0</span></p>
         <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
     </div>
+    
 
 <!-- Link to JavaScript -->
     <script src="assets/js/script.js"></script> 
