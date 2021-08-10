@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Link to CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
- <!-- Tab heading -->
+<!-- Tab heading -->
     <title>Quiz Game</title>
 </head>
 <body>
-    <!-- Welcome Blurb -->
+<!-- Welcome Blurb -->
     <div class="heading">
         <div class="hero"></div>
         <h1>Welcome to the Quiz Game</h1>
@@ -19,13 +19,19 @@
             <br> Don't worry, we'll keep track of your score!
         </p>
     </div>
-    <!-- game area -->
+<!-- username area     -->
+    <form class="usernames">   
+        <label for="username">Username:</label>
+        <input type="text" id="name-one" name="username">
+        <button type="submit"></button>
+    </form> 
+<!-- game area -->
     <div class="game-area">
-        <!-- Question area -->
+<!-- Question area -->
         <div class="question-area"></div>
             <p id="questionNumber"></p>
             <p id="question"></p>
-            <!-- Answer area -->
+<!-- Answer area -->
         <div class="answer-area">
             <input id="answer-box" type="text">
             <button id="submit" data-type="submit">Submit Answer</button>
@@ -37,12 +43,11 @@
             <button id="next">Next</button>
         </div>   
     </div>
-    <!-- Score Board -->
+<!-- Score Board -->
     <div class="score-board">
         <p class="scores">Correct Answers <span id="score">0</span></p>
         <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
-    </div>
-    
+    </div>  
 
 <!-- Link to JavaScript -->
     <script src="assets/js/script.js"></script> 
