@@ -1,6 +1,5 @@
 const usernames = [];
 
-
 //These are all the event listeners.
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("answer-message").style.display = "none";
@@ -40,17 +39,16 @@ async function importData() {
       answerArray.push(columns[i]);
     }
   }
-
   //Generate the random question
-  let num = randomNumber();
+  let num = randomNumber(questionArray.length);
   document.getElementById("question").textContent = questionArray[num];
   document.getElementById("correct-answer").textContent = answerArray[num];
   document.getElementById("correct-answer").style.display = "none";
 }
 
 //Random number generator for question selection
-function randomNumber() {
-  let num1 = Math.floor(Math.random() * 20);
+function randomNumber(x) {
+  let num1 = Math.floor(Math.random() * x);
   return num1;
 }
 
@@ -99,7 +97,6 @@ function wrongAnswer() {
 }
 
 //This function is for collecting and storing the username https://www.youtube.com/watch?v=NxVCq4p0Kb0&ab_channel=SteveGriffith-Prof3ssorSt3v3
-
 function usernameCollection(event) {
   event.preventDefault(); //to stop form submitting
   let username = {
@@ -109,8 +106,7 @@ function usernameCollection(event) {
   }
   usernames.push(username);
   document.querySelector('form').reset();
-  // localStorage.setItem('Usernames', JSON.stringify(usernames));
-  
+  alert("Username Added");
 }
 
 //This function is for when usernames are all collected and we do not want to allow the user to add anymore names
@@ -120,7 +116,7 @@ function endUsernameCollection(event) {
   writeNameScoreboard();
 }
 
-//function to write scoreboard
+//function to write usernames to the scoreboard
 function writeNameScoreboard() {
   let tests = usernames.map(function (item){
     return item['name'];
@@ -131,3 +127,4 @@ function writeNameScoreboard() {
     document.getElementById("score-board").appendChild(newUsername);
 }
 }
+
