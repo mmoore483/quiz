@@ -56,7 +56,7 @@ h1, #question {
     background-color: rgba(var(--brightpink));
 }
 
-#next {
+#next, #end-username {
     background-color: rgba(var(--lightpink));
     cursor: pointer;
 }

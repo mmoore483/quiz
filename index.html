@@ -20,15 +20,17 @@
         </p>
     </div>
 <!-- username area     -->
-    <form class="usernames">   
+    <form class="usernames" id="formusername">   
         <label for="username">Username:</label>
         <input type="text" id="username" name="username">
         <button type="submit" id="username-submit">Submit</button>
+        <button type="submit" id="end-username">Added all Names</button>
     </form> 
 <!-- game area -->
     <div class="game-area">
 <!-- Question area -->
         <div class="question-area"></div>
+            <p id="user-turn"></p>
             <p id="questionNumber"></p>
             <p id="question"></p>
 <!-- Answer area -->
@@ -44,7 +46,7 @@
         </div>   
     </div>
 <!-- Score Board -->
-    <div class="score-board">
+    <div class="score-board" id="score-board">
         <p class="scores">Correct Answers <span id="score">0</span></p>
         <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
     </div>  

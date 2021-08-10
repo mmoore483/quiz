@@ -1,11 +1,12 @@
+const usernames = [];
+
+
 //These are all the event listeners.
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("answer-message").style.display = "none";
   importData();
   let submitButton = document.getElementById("submit");
-  submitButton.addEventListener("click", function () {
-    checkAnswer();
-  });
+  submitButton.addEventListener("click", checkAnswer);
   let nextButton = document.getElementById("next");
   nextButton.addEventListener("click", function () {
     importData();
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("answer-message").style.display = "none";
   })
   document.getElementById('username-submit').addEventListener('click', usernameCollection);
+  document.getElementById('end-username').addEventListener('click', endUsernameCollection);
 })
 
 /* Following "The Coding Train" YouTube tutorial series Working With Data & APIs in JavaScript
@@ -97,14 +99,35 @@ function wrongAnswer() {
 }
 
 //This function is for collecting and storing the username https://www.youtube.com/watch?v=NxVCq4p0Kb0&ab_channel=SteveGriffith-Prof3ssorSt3v3
-let usernames = [];
+
 function usernameCollection(event) {
   event.preventDefault(); //to stop form submitting
   let username = {
-    uname: document.getElementById("username").value
+    name: document.getElementById("username").value,
+    correct: "",
+    incorrect: "",
   }
-usernames.push(username);
-document.querySelector('form').reset();
-console.log(usernames)
-localStorage.setItem('Usernames', JSON.stringify(usernames));
+  usernames.push(username);
+  document.querySelector('form').reset();
+  // localStorage.setItem('Usernames', JSON.stringify(usernames));
+  
+}
+
+//This function is for when usernames are all collected and we do not want to allow the user to add anymore names
+function endUsernameCollection(event) {
+  event.preventDefault(); //to stop form submitting
+  document.getElementById("formusername").style.display ="none"; //removes form area so no more names can be added
+  writeNameScoreboard();
+}
+
+//function to write scoreboard
+function writeNameScoreboard() {
+  let tests = usernames.map(function (item){
+    return item['name'];
+  });
+  for (let i=0; i<tests.length; i++) {
+    let newUsername = document.createElement("p");
+    newUsername.innerHTML = tests[i];
+    document.getElementById("score-board").appendChild(newUsername);
+}
 }
