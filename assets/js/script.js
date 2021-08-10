@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("answer-box").value = "";
     document.getElementById("answer-message").style.display = "none";
   })
+  document.getElementById('username-submit').addEventListener('click', usernameCollection);
 })
 
 /* Following "The Coding Train" YouTube tutorial series Working With Data & APIs in JavaScript
@@ -93,4 +94,17 @@ function wrongAnswer() {
   let correctAnswer = document.getElementById("correct-answer").textContent;
   document.getElementById("message").innerText = `Oops... you answered: \r\n ${userAnswer} \r\n\r\n The correct answer is: \r\n ${correctAnswer}`;
   document.getElementById("answer-message").style.display = "flex";
+}
+
+//This function is for collecting and storing the username https://www.youtube.com/watch?v=NxVCq4p0Kb0&ab_channel=SteveGriffith-Prof3ssorSt3v3
+let usernames = [];
+function usernameCollection(event) {
+  event.preventDefault(); //to stop form submitting
+  let username = {
+    uname: document.getElementById("username").value
+  }
+usernames.push(username);
+document.querySelector('form').reset();
+console.log(usernames)
+localStorage.setItem('Usernames', JSON.stringify(usernames));
 }
