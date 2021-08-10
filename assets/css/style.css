@@ -52,7 +52,7 @@ h1, #question {
     border-radius: 10px;
 }
 
-#submit {
+#submit, #username-submit {
     background-color: rgba(var(--brightpink));
 }
 
@@ -80,5 +80,9 @@ h1, #question {
 
 #next:hover {
     background-color: rgba(var(--brightpink));
+}
+
+.usernames {
+    align-items:center;
 }
 
