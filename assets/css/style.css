@@ -1,40 +1,56 @@
 /* Import google fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Bitter&family=Roboto&display=swap');
 
-/* Info on global variable creation for colours was from https://www.w3schools.com/css/css3_variables.asp 
-Colours are in rgba so that opacity can be applied for the winning message background colour https://stackoverflow.com/questions/40010597/how-do-i-apply-opacity-to-a-css-color-variable*/
+/* 
+Info on global variable creation for colours was from 
+https://www.w3schools.com/css/css3_variables.asp 
+Colours are in rgb so that opacity can be applied for the winning message background colour 
+https://stackoverflow.com/questions/40010597/how-do-i-apply-opacity-to-a-css-color-variable
+*/
+
 :root {
     --dark: 48, 4, 16;
-    --pale: 255,235,241;
+    --pale: 255, 235, 241;
     --lightpink: 255, 150, 181;
     --brightpink: 255, 51, 112;
-  }
+}
+
 
 /* General Style */
 
 body {
-    font-family: "Robot", sans-serif;
+    font-family: "Roboto", sans-serif;
     text-align: center;
     color: rgba(var(--dark));
     background-color: rgb(var(--pale));
     font-size: 1em;
 }
 
+.center {
+    align-items: center;
+}
 
-/* Welcome Blurb */
+h2,
+label {
+    font-size: 1.5em;
+}
 
-h1, #question, h2 {
+/* Welcome Blurb and Header area */
+
+h1,
+#question,
+h2 {
     font-family: "Bitter", sans-serif;
     font-size: 2em;
 }
 
 .hero {
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/question-mark.jpg"); */
     background-image: url("../images/question-mark.jpg");
-    height:50vh;
+    height: 50vh;
     background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Answer area */
@@ -45,35 +61,46 @@ h1, #question, h2 {
     align-items: center;
 }
 
-#answer-box, button {
+input,
+button {
     width: 70%;
-    font-family: "Robot", sans-serif;
+    font-family: "Roboto", sans-serif;
     border: none;
     font-size: 1.5em;
     margin: 0.5em auto 0 auto;
     border-radius: 10px;
 }
 
-/* Username area */
 
-#submit, #username-submit, #next:hover {
+/* Username area */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#submit,
+#username-submit,
+#next:hover {
     background-color: rgb(var(--brightpink));
     cursor: pointer;
 }
 
-#next, #end-username, #submit:hover, #username-submit:hover {
+#next,
+#submit:hover,
+#username-submit:hover {
     background-color: rgb(var(--lightpink));
     cursor: pointer;
 }
 
 /* Winning message */
+
 #answer-message {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(var(--dark),0.95);
+    background-color: rgba(var(--dark), 0.95);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,11 +111,8 @@ h1, #question, h2 {
 }
 
 
-.center {
-    align-items:center;
-}
-
 /* Scoreboard Area */
+
 span {
     padding: 0.5em;
     display: flex;
@@ -97,6 +121,21 @@ span {
     font-weight: 700;
 }
 
-h2 {
-    font-size: 1.5em;
+/* Media Queries - width of button and input and font-size*/
+
+@media only screen and (min-width: 768px) {
+
+    button,
+    input {
+        width: 50%;
+        margin: 1rem, auto, 1rem, auto;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        font-size: 2rem;
+        max-width: 75%;
+        margin: auto;
+    }
 }
