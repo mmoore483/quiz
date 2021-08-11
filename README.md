@@ -111,9 +111,30 @@ The hero image for this site was found from [pixabay](https://pixabay.com/illust
 
 - Ability to press enter on the "answer message" screen as to not need to use the mouse: less of an issue for touchscreen users.
 
+- Avoid repeat questions in a session
+
 ## Testing
 
 ### Personal Testing
+- Used lighthouse testing:
+  - desktop 100% performance, accessibility, best practices however 89% SEO due to lack of meta description
+  - mobile 99% perfomance, 100% accessibility and best practices, 91% SEO. 
+- Carried out the following successfully
+  - Checked a username can be entered using enter key
+  - Checked a username can be entered using the mouse
+  - Checked the correct username is then used in greeting message and scoreboard
+  - Checked that the submit answer button triggers the answer message overlay
+  - Checked that the answer being correct or incorrect is true
+  - Checked correct answers affect the "correct" part of the scoreboard
+  - Checked incorrect answers affect the "incorrect" part of the scoreboard
+  - Checked a random question is triggered each time - this may lead to repeats due to the nature of random.
+  - Checked clicking "next" will remove the celebration/commiseration overlay
+  - Checked clicking "next" provides a new random question
+  - Checked clicking "next" refocusses the cursor into the answer box automatically
+  - Checked the hover effects over the buttons work correctly
+  - Checked responsiveness using devtools whatismyscreenresolution
+  - Checked colour blindess using coolors.co to ensure all text is legible
+  - Checked answers can be in any case (upper/lower/mixture) and still be accepted if correct
 
 ### Validator Testing
 - HTML
