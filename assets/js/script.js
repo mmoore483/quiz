@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
             if (event.key === "Enter") {
                 submitButton();
             }
-        })
-})
+        });
+});
 
 /**
  * Triggered by the onclick event on the submit button. It creates a username 
@@ -30,7 +30,7 @@ function submitButton() {
     //store all of the names from the usernames object into an array
     let usernameArray = usernames.map(function(item) {
         return item['name'];
-    })
+    });
     checkAnswer();
     //Use the username to search the usernames object so we can adjust the score
     objIndex = usernames.findIndex((obj => obj.name == usernameArray[0]));
@@ -41,7 +41,7 @@ function submitButton() {
         //Adjust the incorrect score if incorrect
         usernames[objIndex].incorrect++;
     }
-};
+}
 
 /**
  * This function is triggered by the onclick event for the next button.
@@ -74,7 +74,7 @@ async function importData() {
     const data = await response.text();
     //split data by rows
     const rows = data.split(/\r?\n|\r/).slice(1);
-    for (row of rows) {
+    for (var row of rows) {
         const columns = row.split(',');
 
         //Loop to create a question array
@@ -186,7 +186,7 @@ function usernameCollection(event) {
         name: document.getElementById("username").value,
         correct: 0,
         incorrect: 0,
-    }
+    };
     //push object to const array declared at top of code
     usernames.push(username);
     //clear form contents
@@ -202,7 +202,7 @@ function usernameCollection(event) {
         `<h2>Hi ${usernameArray[0]}! <br> Here are your questions, good luck</h2>`;
     document.getElementById("answer-area").style.display = "flex";
     //Write scoreboard area now we know the username
-    writeScoreboard()
+    writeScoreboard();
     //Show the first question
     importData();
 }
