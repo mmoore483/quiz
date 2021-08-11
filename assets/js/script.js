@@ -4,6 +4,7 @@ const usernames = [];
 //These are all the event listeners.
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("answer-message").style.display = "none";
+    document.getElementById("answer-area").style.display = "none";
     document.getElementById('username-submit').addEventListener('click', usernameCollection);
     document.getElementById("submit").addEventListener("click", submitButton);        
     document.getElementById("next").addEventListener("click", nextButton);
@@ -111,8 +112,9 @@ function usernameCollection(event) {
     let usernameArray = usernames.map(function(item) { //store all of the names from the usernames object into an array
         return item['name'];
     });
-    document.getElementById("greeting").innerHTML = `Hi ${usernameArray[0]}, here are your questions, good luck! `;
-    
+    document.getElementById("greeting").innerHTML = `<h2>Hi ${usernameArray[0]}! <br> Here are your questions, good luck</h2>`;
+    document.getElementById("answer-area").style.display = "flex";
+    writeScoreboard()
     importData();
 }
 

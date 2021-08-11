@@ -19,9 +19,11 @@ body {
     background-color: rgba(var(--pale));
     font-size: 1em;
 }
+
+
 /* Welcome Blurb */
 
-h1, #question {
+h1, #question, h2 {
     font-family: "Bitter", sans-serif;
     font-size: 2em;
 }
@@ -37,7 +39,7 @@ h1, #question {
 
 /* Answer area */
 
-.answer-area {
+#answer-area {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,11 +56,12 @@ h1, #question {
 
 /* Username area */
 
-#submit, #username-submit {
+#submit, #username-submit, #next:hover {
     background-color: rgba(var(--brightpink));
+    cursor: pointer;
 }
 
-#next, #end-username {
+#next, #end-username, #submit:hover, #username-submit:hover {
     background-color: rgba(var(--lightpink));
     cursor: pointer;
 }
@@ -80,11 +83,20 @@ h1, #question {
     font-size: 2em;
 }
 
-#next:hover {
-    background-color: rgba(var(--brightpink));
-}
 
-.usernames {
+.center {
     align-items:center;
 }
 
+/* Scoreboard Area */
+span {
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    font-family: "Bitter", sans-serif;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5em;
+}
