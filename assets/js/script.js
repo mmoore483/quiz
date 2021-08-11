@@ -114,6 +114,7 @@ function endUsernameCollection(event) {
   event.preventDefault(); //to stop form submitting
   document.getElementById("formusername").style.display ="none"; //removes form area so no more names can be added
   writeNameScoreboard();
+  console.log(usernames);
 }
 
 //function to write usernames to the scoreboard
@@ -125,6 +126,14 @@ function writeNameScoreboard() {
     let newUsername = document.createElement("p");
     newUsername.innerHTML = tests[i];
     document.getElementById("score-board").appendChild(newUsername);
+    objIndex = usernames.findIndex((obj => obj.name == tests[i]));
+    console.log("Before update: ", usernames[objIndex]);
+    usernames[objIndex].correct = "2";
+    console.log("After update: ", usernames[objIndex]);
 }
 }
+
+
+
+
 
