@@ -15,7 +15,7 @@ function newTest() {
         return item['name'];
     })
 
-    function loopUsers() {
+    async function loopUsers() {
         for (let i = 0; i < usernameArray.length; i++) {
             //in this loop I want to 
             //get that username
@@ -25,33 +25,40 @@ function newTest() {
             console.log("loop entered");
             let currentUser = usernameArray[i];
             console.log("current user" + currentUser);
-            importData()
-            let submitButton = document.getElementById("submit");
-            submitButton.addEventListener("click", function() {
-                checkAnswer
-                objIndex = usernames.findIndex((obj => obj.name == currentUser)); //Use the username to search the usernames object so we can adjust the score
-                console.log("Before update: ", usernames[objIndex]); //log what it current says
-                if (checkAnswer() === true) {
-                    usernames[objIndex].correct = +1; //Adjust the correct score if correct
-                    console.log("After update: ", usernames[objIndex]);
-                } else {
-                    usernames[objIndex].incorrect = +1;
-                    console.log("After update: ", usernames[objIndex]);
-                } //Adjust the incorrect score if incorrect
-            });
-            let nextButton = document.getElementById("next");
-            nextButton.addEventListener("click", function() {
-                document.getElementById("answer-box").value = ""; //clear answer box
-                document.getElementById("answer-message").style.display = "none"; // clear showing the answer
-            })
+            const next = false;
+            await importData();
+            document.getElementById("submit").addEventListener("click", submitButton);        
+            document.getElementById("next").addEventListener("click", nextButton);
+            
+            function submitButton(event) {
+                
+                    checkAnswer
+                    objIndex = usernames.findIndex((obj => obj.name == currentUser)); //Use the username to search the usernames object so we can adjust the score
+                    console.log("Before update: ", usernames[objIndex]); //log what it current says
+                    if (checkAnswer() === true) {
+                        usernames[objIndex].correct = +1; //Adjust the correct score if correct
+                        console.log("After update: ", usernames[objIndex]);
+                    } else {
+                        usernames[objIndex].incorrect = +1;
+                        console.log("After update: ", usernames[objIndex]);
+                    } //Adjust the incorrect score if incorrect
+                    return next = true;
+                };
+            
+
+           function nextButton(next) {
+                    document.getElementById("answer-box").value = ""; //clear answer box
+                    document.getElementById("answer-message").style.display = "none"; // clear showing the answer
+                    return next = true;
+                }
+                
+            }
         }
-    }
-
-    for (let j = 0; j < 10; j++) {
+    
+    // for (let j = 0; j < 10; j++) {
         loopUsers();
-    }
+    // }
 }
-
 
 /* Following "The Coding Train" YouTube tutorial series Working With Data & APIs in JavaScript
 The following function importData retrieves a csv and splits it into rows by linebreak and then 
