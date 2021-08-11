@@ -5,8 +5,6 @@ const usernames = [];
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("answer-message").style.display = "none";
     document.getElementById('username-submit').addEventListener('click', usernameCollection);
-    document.getElementById('end-username').addEventListener('click', endUsernameCollection);
-
 })
 
 function newTest() {
@@ -114,17 +112,6 @@ function checkAnswer() {
     }
 }
 
-// //This function tracks the number of correct answers and has been adapted from the Code Institute Love Maths Walkthrough Project
-// function correctScores() {
-//   let oldScore = parseInt(document.getElementById("score").innerText);
-//   document.getElementById("score").innerText = ++oldScore;
-// }
-
-// //This function tracks the number of incorrect answers and has been adapted from the Code Institute Love Maths Walkthrough Project
-// function inCorrectScores() {
-//   let oldScore = parseInt(document.getElementById("incorrect").innerText);
-//   document.getElementById("incorrect").innerText = ++oldScore; 
-// }
 
 //This function shows the correct answer rather than creating an alert
 function celebrate() {
@@ -151,16 +138,13 @@ function usernameCollection(event) {
     }
     usernames.push(username);
     document.querySelector('form').reset();
-    alert("Username Added");
-}
-
-//This function is for when usernames are all collected and we do not want to allow the user to add anymore names
-function endUsernameCollection(event) {
-    event.preventDefault(); //to stop form submitting
     document.getElementById("formusername").style.display = "none"; //removes form area so no more names can be added
+    let usernameArray = usernames.map(function(item) { //store all of the names from the usernames object into an array
+        return item['name'];
+    });
+    document.getElementById("greeting").innerHTML = `Hi ${usernameArray[0]}, here are your questions, good luck! `;
     writeNameScoreboard();
     console.log(usernames);
-    newTest();
 }
 
 //function to write usernames to the scoreboard
