@@ -25,6 +25,7 @@ function submitButton() {
 function nextButton() {
     document.getElementById("answer-box").value = ""; //clear answer box
     document.getElementById("answer-message").style.display = "none"; // clear showing the answer
+    writeScoreboard();
     importData();
 }
 /* Following "The Coding Train" YouTube tutorial series Working With Data & APIs in JavaScript
@@ -111,24 +112,17 @@ function usernameCollection(event) {
         return item['name'];
     });
     document.getElementById("greeting").innerHTML = `Hi ${usernameArray[0]}, here are your questions, good luck! `;
-    writeNameScoreboard();
-    console.log(usernames);
-
+    
     importData();
 }
 
 //function to write usernames to the scoreboard
-function writeNameScoreboard() {
+function writeScoreboard() {
     let usernameArray = usernames.map(function(item) { //store all of the names from the usernames object into an array
         return item['name'];
     });
-    for (let i = 0; i < usernameArray.length; i++) {
-        let newUsername = document.createElement("p"); //create a new element to hold username
-        newUsername.innerHTML = usernameArray[i];
-        document.getElementById("score-board").appendChild(newUsername); //write the current username to the new element created above
-        // objIndex = usernames.findIndex((obj => obj.name == usernameArray[i])); //Use the username to search the usernames object so we can adjust the score
-        // console.log("Before update: ", usernames[objIndex]);
-        // usernames[objIndex].correct = "2"; //Adjust the score
-        // console.log("After update: ", usernames[objIndex]);
+    document.getElementById("name").innerHTML=usernameArray[0];
+    objIndex = usernames.findIndex((obj => obj.name == usernameArray[0])); //Use the username to search the usernames object so we can adjust the score
+    document.getElementById("correct").innerHTML = `Correct: ${usernames[objIndex].correct}`; //Adjust the score
+    document.getElementById("incorrect").innerHTML = `Incorrect: ${usernames[objIndex].incorrect}`;
     }
-}
