@@ -16,7 +16,7 @@ body {
     font-family: "Robot", sans-serif;
     text-align: center;
     color: rgba(var(--dark));
-    background-color: rgba(var(--pale));
+    background-color: rgb(var(--pale));
     font-size: 1em;
 }
 
@@ -57,12 +57,12 @@ h1, #question, h2 {
 /* Username area */
 
 #submit, #username-submit, #next:hover {
-    background-color: rgba(var(--brightpink));
+    background-color: rgb(var(--brightpink));
     cursor: pointer;
 }
 
 #next, #end-username, #submit:hover, #username-submit:hover {
-    background-color: rgba(var(--lightpink));
+    background-color: rgb(var(--lightpink));
     cursor: pointer;
 }
 

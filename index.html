@@ -11,22 +11,22 @@
 </head>
 <body>
 <!-- Welcome Blurb -->
-    <div class="heading">
-        <div class="hero"></div>
+    <dheader class="heading">
+        <div class="hero" role="img" aria-label="Question mark image"></div>
         <h1>Welcome to the Quiz Game</h1>
         <p>How many can you get right? 
             <br>Enter your answers in the box below and press submit.
             <br> Don't worry, we'll keep track of your score!
         </p>
-    </div>
-<!-- username area     -->
+    </header>
+<!-- username area -->
     <form class="center" id="formusername">   
         <label for="username">What's your name?</label>
         <input type="text" id="username" name="username">
         <button type="submit" id="username-submit">Add Name</button>
     </form> 
 <!-- game area -->
-    <div class="game-area">
+    <section class="game-area">
 <!-- Question area -->
         <div class="question-area"></div>
             <p id="greeting"></p>
@@ -41,11 +41,15 @@
             <p id="message">Testing</p>
             <button id="next">Next</button>
         </div>   
-    </div>
+    </section>
 <!-- Score Board -->
-    <div class="score-board" id="score-board">
-        <p><span id="name"></span><span id="correct">Correct Answers: </span><span id="incorrect"> Incorrect Answers: </span></p>
-    </div>  
+    <section class="score-board" id="score-board">
+        <p>
+            <span id="name"></span>
+            <span id="correct">Correct Answers: </span>
+            <span id="incorrect"> Incorrect Answers: </span>
+        </p>
+    </section>  
 
 <!-- Link to JavaScript -->
     <script src="assets/js/script.js"></script> 
