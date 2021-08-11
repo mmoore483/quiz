@@ -4,14 +4,18 @@ const usernames = [];
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("answer-message").style.display = "none";
     document.getElementById("answer-area").style.display = "none";
-    document.getElementById('username-submit').addEventListener('click', usernameCollection);
-    document.getElementById("submit").addEventListener("click", submitButton);        
-    document.getElementById("next").addEventListener("click", nextButton);
-    document.getElementById("answer-box").addEventListener("keydown",function(event) {
-        if (event.key === "Enter") {
-            submitButton();
-        }
-    })
+    document.getElementById('username-submit').addEventListener('click',
+        usernameCollection);
+    document.getElementById("submit").addEventListener("click",
+        submitButton);
+    document.getElementById("next").addEventListener("click",
+        nextButton);
+    document.getElementById("answer-box").addEventListener("keydown",
+        function(event) {
+            if (event.key === "Enter") {
+                submitButton();
+            }
+        })
 })
 
 /**
@@ -23,20 +27,20 @@ document.addEventListener("DOMContentLoaded", function() {
  * with different usernames.
  */
 function submitButton() {
-     //store all of the names from the usernames object into an array
+    //store all of the names from the usernames object into an array
     let usernameArray = usernames.map(function(item) {
         return item['name'];
     })
     checkAnswer();
     //Use the username to search the usernames object so we can adjust the score
-    objIndex = usernames.findIndex((obj => obj.name == usernameArray[0])); 
+    objIndex = usernames.findIndex((obj => obj.name == usernameArray[0]));
     if (checkAnswer() === true) {
         //Adjust the correct score if correct
-        usernames[objIndex].correct++; 
+        usernames[objIndex].correct++;
     } else {
         //Adjust the incorrect score if incorrect
-        usernames[objIndex].incorrect++; 
-    } 
+        usernames[objIndex].incorrect++;
+    }
 };
 
 /**
@@ -47,11 +51,11 @@ function submitButton() {
  */
 function nextButton() {
     //clear answer box
-    document.getElementById("answer-box").value = ""; 
+    document.getElementById("answer-box").value = "";
     //focus pointer into answer box
-    document.getElementById("answer-box").focus(); 
+    document.getElementById("answer-box").focus();
     // clear answer message
-    document.getElementById("answer-message").style.display = "none"; 
+    document.getElementById("answer-message").style.display = "none";
     writeScoreboard();
     importData();
 }
@@ -60,7 +64,7 @@ function nextButton() {
  * Following "The Coding Train" YouTube tutorial series Working With Data & APIs 
  * in JavaScript. The following function, importData, retrieves a csv and splits
  * it into rows by linebreak and then into columns by comma.
-*/
+ */
 async function importData() {
     // Create an array for each column
     let questionArray = [];
@@ -88,7 +92,8 @@ async function importData() {
     //Use that random number to get a question out of the array and show it in DOM
     document.getElementById("question").textContent = questionArray[num];
     //Get correlating answer out of the array and store it but don't show it
-    document.getElementById("correct-answer").textContent = answerArray[num];
+    document.getElementById("correct-answer").textContent = answerArray[
+    num];
     document.getElementById("correct-answer").style.display = "none";
 }
 
@@ -97,7 +102,7 @@ async function importData() {
  * Passes in a number as an argument
  * Generates random number, rounds it, times it by the argument in
  * Returns the random number
-*/
+ */
 function randomNumber(x) {
     let num1 = Math.floor(Math.random() * x);
     return num1;
@@ -113,7 +118,8 @@ function checkAnswer() {
     //Get the user entered answer and make it lower case
     let userAnswer = document.getElementById("answer-box").value.toLowerCase();
     //Get the correct answer and make it lower case
-    let correctAnswer = document.getElementById("correct-answer").textContent.toLowerCase();
+    let correctAnswer = document.getElementById("correct-answer").textContent
+        .toLowerCase();
     //Compare the lower case answers and alert the user of result and answer
     let isCorrect = userAnswer === correctAnswer;
     if (isCorrect) {
@@ -134,7 +140,8 @@ function celebrate() {
     //Get correct answer from the dom
     let correctAnswer = document.getElementById("correct-answer").textContent;
     //Write message to element using correct answer and text
-    document.getElementById("message").innerText = `YAY! You got it right! \r\n\r\n The correct answer is: \r\n ${correctAnswer}`;
+    document.getElementById("message").innerText =
+        `YAY! You got it right! \r\n\r\n The correct answer is: \r\n ${correctAnswer}`;
     //Show the message to the user
     document.getElementById("answer-message").style.display = "flex";
 }
@@ -151,7 +158,8 @@ function wrongAnswer() {
     //Get correct answer from DOM
     let correctAnswer = document.getElementById("correct-answer").textContent;
     //Put this message into the DOM
-    document.getElementById("message").innerText = `Oops... you answered: \r\n ${userAnswer} \r\n\r\n The correct answer is: \r\n ${correctAnswer}`;
+    document.getElementById("message").innerText =
+        `Oops... you answered: \r\n ${userAnswer} \r\n\r\n The correct answer is: \r\n ${correctAnswer}`;
     //Display the message
     document.getElementById("answer-message").style.display = "flex";
 }
@@ -186,11 +194,12 @@ function usernameCollection(event) {
     //removes the form area so no further username inputs are possible
     document.getElementById("formusername").style.display = "none";
     //stores all the names from the usernames object into an array
-    let usernameArray = usernames.map(function(item) { 
+    let usernameArray = usernames.map(function(item) {
         return item['name'];
     });
     //Display message greeting the user
-    document.getElementById("greeting").innerHTML = `<h2>Hi ${usernameArray[0]}! <br> Here are your questions, good luck</h2>`;
+    document.getElementById("greeting").innerHTML =
+        `<h2>Hi ${usernameArray[0]}! <br> Here are your questions, good luck</h2>`;
     document.getElementById("answer-area").style.display = "flex";
     //Write scoreboard area now we know the username
     writeScoreboard()
@@ -210,10 +219,12 @@ function writeScoreboard() {
         return item['name'];
     });
     //As we currently only have 1 username, it writes that to the DOM
-    document.getElementById("name").innerHTML=usernameArray[0];
+    document.getElementById("name").innerHTML = usernameArray[0];
     //Use the username to search the object for the correct and incorrect keys
     objIndex = usernames.findIndex((obj => obj.name == usernameArray[0]));
     //Write the scores to the DOM
-    document.getElementById("correct").innerHTML = `Correct: ${usernames[objIndex].correct}`;
-    document.getElementById("incorrect").innerHTML = `Incorrect: ${usernames[objIndex].incorrect}`;
-    }
+    document.getElementById("correct").innerHTML =
+        `Correct: ${usernames[objIndex].correct}`;
+    document.getElementById("incorrect").innerHTML =
+        `Incorrect: ${usernames[objIndex].incorrect}`;
+}
