@@ -52,6 +52,8 @@ h1, #question {
     border-radius: 10px;
 }
 
+/* Username area */
+
 #submit, #username-submit {
     background-color: rgba(var(--brightpink));
 }
