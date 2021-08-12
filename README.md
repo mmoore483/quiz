@@ -54,7 +54,7 @@ The website will consist of one page with distinct areas.
 
 ![Color Palette](README_Images/colour-palette.png)
 
-- In the CSS 4 variable colours have been created: dark, pale, lightpink, brightpink.
+- In the CSS, 4 variable colours have been created: dark, pale, lightpink, brightpink.
 - Dark, #300410 has been used rather than black for most of the site to aid user experience, especially for those who are low vision users. It is a colour picked out from the hero image in order to have a consistent theme. It is used either as text or a background colour for the best contrast. 
 - Pale, #FFEBF1 has been used for text contrast on strong background colours for better contrast, limiting eye strain and allowing for a better user experience.
 - Pale has also been used as a background for the main body of the site. This aids contrast with the dark text but also maintains a minimalistic site allowing the text information to be the main focus for the user. 
@@ -189,15 +189,16 @@ To trial changes to the site without affecting the original, the GitHub Reposito
 - Quiz questions from https://www.funquizzes.uk/easy-quiz-questions/
 - Responsiveness tested using [whatismyscreenresolution](http://whatismyscreenresolution.net/multi-screen-test)
 - Testing site for colour accessibility and creating colour palette image: coolors.co 
-- googlefonts for the imported fonts
+- The imported fonts are from googlefonts 
 - W3C HTML Validator for testing validity of HTML
 - Jigsaw CSS Validator for testing validity of CSS
 - JShint Validator for testing validity of JS
 - Matt Rudge for the Code Institute Master Template
 - Pixabay for [question mark image](https://pixabay.com/illustrations/question-mark-question-why-5633947/)
-- Info on global variable creation for colours was from [W3Schools](https://www.w3schools.com/css/css3_variables.asp)
+- Information on global variable creation for colours was from [W3Schools](https://www.w3schools.com/css/css3_variables.asp)
 - The Coding Train [tutorial 1.1](https://www.youtube.com/watch?v=tc8DU14qX6I&t=0s&ab_channel=TheCodingTrain) and [tutorial 1.2](https://www.youtube.com/watch?v=RfMkdvN-23o&ab_channel=TheCodingTrain)
 - The Code Institute [Love Maths Walkthrough](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode) for logic behind aspects of the game and general inspiration
 - Steve Griffith (Prof3ssorSt3v3) for YouTube tutorial for [saving using inputs in JS objects](https://www.youtube.com/watch?v=NxVCq4p0Kb0&ab_channel=SteveGriffith-Prof3ssorSt3v3)
 - [stackoverflow forum](https://stackoverflow.com/questions/40010597/how-do-i-apply-opacity-to-a-css-color-variable) for information on rgba colours and variables
+- Images of site at the beginning of this README were created using [ami.responsivedesign](http://ami.responsivedesign.is/#)
 
