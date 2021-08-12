@@ -110,7 +110,7 @@ function randomNumber(x) {
 
 /**
  * Checks for the correct answer by taking the user entered value from the DOM
- * makes it lower case and compares it to the answer stored in the DOM also 
+ * makes it lower-case and compares it to the answer stored in the DOM also 
  * lowercase. If the answer is correct, call celebrate functon. If the answer is
  * incorrect, call the wrongAnswer function. 
  */
@@ -137,7 +137,7 @@ function checkAnswer() {
  * Changes CSS to show the message element
  */
 function celebrate() {
-    //Get correct answer from the dom
+    //Get correct answer from the DOM
     let correctAnswer = document.getElementById("correct-answer").textContent;
     //Write message to element using correct answer and text
     document.getElementById("message").innerText =

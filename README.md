@@ -4,9 +4,12 @@ Portfolio Project 2 JavaScript Essentials - Code Institute
 
 ## About
 
-This Quiz game is designed to act as a randomised quiz for people who love easy levelled trivia. There was an uptake in quizzing at the beginning of the COVID-19 pandemic and these are the level of questions enjoyed in homes all over the country. 
+This Quiz Game is designed to act as a randomised quiz for people who love easy levelled trivia. There was an uptake in quizzing at the beginning of the COVID-19 pandemic and these are the level of questions enjoyed in homes all over the country. 
 
 # User Experience
+
+![site-image-1](README_Images/am-i-responsive-1.PNG)
+![sit-image02](README_Images/am-i-responsive-2.PNG)
 
 ## Strategy
 
@@ -43,7 +46,7 @@ The website will consist of one page with distinct areas.
 3. A question is asked
 4. An answer box with submission button.
 6. Upon triggering the submit button, the screen will be overlayed with a celebration or commiseration screen and a next button to return to the main screen for the next question
-7. An scoreboard area at the base of the page for keeping track of the score
+7. A scoreboard area at the base of the page for keeping track of the score
 
 ## Surface
 
@@ -53,12 +56,12 @@ The website will consist of one page with distinct areas.
 
 - In the CSS 4 variable colours have been created: dark, pale, lightpink, brightpink.
 - Dark, #300410 has been used rather than black for most of the site to aid user experience, especially for those who are low vision users. It is a colour picked out from the hero image in order to have a consistent theme. It is used either as text or a background colour for the best contrast. 
-- Pale, #FFEBF1 has been used for text contrast on strong background colors for better contrast, limiting eye strain and allowing for a better user experience.
+- Pale, #FFEBF1 has been used for text contrast on strong background colours for better contrast, limiting eye strain and allowing for a better user experience.
 - Pale has also been used as a background for the main body of the site. This aids contrast with the dark text but also maintains a minimalistic site allowing the text information to be the main focus for the user. 
 - Brightpink has been selected from the hero image using the colour picker tool. This has been used as an accent colour for buttons
 - Lightpink has been selected from the hero image using the colour picker tool. This has been used as an accent colour for buttons.
 
-Under some colour blindness types, the two pinks (either side of the image)look quite similar however as they are used as accents and never placed directly atop one another, it does not affect the use of the colours or user experience: there is no need for contrast between the two pink colours (Brightpink and Lightpink). 
+Under some colour blindness types, the two pinks (either side of the image) look quite similar however as they are used as accents and never placed directly atop one another, it does not affect the use of the colours or user experience: there is no need for contrast between the two pink colours (Brightpink and Lightpink). 
 
 The colour picker used was in chrome dev tools.
 
@@ -67,7 +70,7 @@ The colour palette image was produced using coolors.co.
 ### Typography
 
 I have used https://fonts.google.com/ for my fonts. Using Bitter for the headings and Roboto for body text and sans-serif as back up. These are classic, easily legible fonts.
-To achieve this I imported the following to the top of my style.css file.
+To achieve this, I imported the following to the top of my style.css file.
 
     @import url('https://fonts.googleapis.com/css2?family=Bitter&family=Roboto&display=swap');
 
@@ -96,14 +99,14 @@ The hero image for this site was found from [pixabay](https://pixabay.com/illust
 
 - Upon pressing "next" the cursor is focussed in the answer box
 
-- From a coder experience, the variables at the beginning of the css make it easy to change colour scheme. It is also easy to update the quiz questions as they are read in from a csv rather than written out in the script.js file. 
+- From a coder experience, the variables at the beginning of the CSS make it easy to change colour scheme. It is also easy to update the quiz questions as they are read in from a csv rather than written out in the script.js file. 
 
-- A celebration or commiseration overlay that is only visible upon submission of the answer and disappears when the next button is pressed. Ii incorrect, it also displays to the user what their submission was and always shows what the actual answer is. 
+- A celebration or commiseration overlay that is only visible upon submission of the answer and disappears when the next button is pressed. If incorrect, it also displays to the user what their submission was and always shows what the actual answer is. 
 
 
 
 ### Features Left to Implement
-- The ability to add more than one user: much fo the object set up was orientated around this task.
+- The ability to add more than one user: much of the object set up was orientated around this task. I recognise that there are different ways to implement for a sole user which would have made the code simpler.
 
 - Multiple choice: in retrospect it is difficult to get the right answer due to the complexity of multiple words and punctuation as well as poor spelling. 
 
@@ -118,7 +121,7 @@ The hero image for this site was found from [pixabay](https://pixabay.com/illust
 ### Personal Testing
 - Used lighthouse testing:
   - desktop 100% performance, accessibility, best practices however 89% SEO due to lack of meta description
-  - mobile 99% perfomance, 100% accessibility and best practices, 91% SEO. 
+  - mobile 99% performance, 100% accessibility and best practices, 91% SEO. 
 - Carried out the following successfully
   - Checked a username can be entered using enter key
   - Checked a username can be entered using the mouse
@@ -130,10 +133,10 @@ The hero image for this site was found from [pixabay](https://pixabay.com/illust
   - Checked a random question is triggered each time - this may lead to repeats due to the nature of random.
   - Checked clicking "next" will remove the celebration/commiseration overlay
   - Checked clicking "next" provides a new random question
-  - Checked clicking "next" refocusses the cursor into the answer box automatically
+  - Checked clicking "next" refocuses the cursor into the answer box automatically
   - Checked the hover effects over the buttons work correctly
   - Checked responsiveness using devtools whatismyscreenresolution
-  - Checked colour blindess using coolors.co to ensure all text is legible
+  - Checked colour blindness using coolors.co to ensure all text is legible
   - Checked answers can be in any case (upper/lower/mixture) and still be accepted if correct
 
 ### Validator Testing
@@ -141,7 +144,7 @@ The hero image for this site was found from [pixabay](https://pixabay.com/illust
   - No errors when passed through the [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmmoore483.github.io%2Fquiz%2F)
   - There are two warnings relating to the use of section elements without heading elements
 - CSS
-  - Errors in the CSS validator were due to the use of variables with rgb. This was done to allow colours to be declared at the top of the css file and be used throughout whilst maintaing one central area to change the theme. The opacity requirement was for aesthetic and researched using other coder's experienced. Despite that, they do technically count as errors. This was carried out using the [jigsaw validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmmoore483.github.io%2Fquiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+  - Errors in the CSS validator are due to the use of variables with rgb. This was done to allow colours to be declared at the top of the CSS file and be used throughout whilst maintaining one central area to change the theme. The opacity requirement was for aesthetic and researched using other coder's experienced. Despite that, they do technically count as errors. This was carried out using the [jigsaw validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmmoore483.github.io%2Fquiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - JS
   - Used [JShint](https://jshint.com/) with no major warnings
 
@@ -175,7 +178,7 @@ To trial changes to the site without affecting the original, the GitHub Reposito
 
 - Log into your GitHub then find the gitpod repository
 - Click the Code button
-- If cloning with HTTPS click the clipboard icon to copy the link
+- If cloning with HTTPS, click the clipboard icon to copy the link
 - Open Gitbash
 - Change the current working directory to the location where you want the cloned directory to be.
 - Type git clone, and then paste the URL you copied earlier.
